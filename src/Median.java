@@ -1,9 +1,24 @@
+import java.util.Scanner;
+import java.util.Arrays;
+
 public class Median {
-    
-        // TODO: Read n
-        // TODO: Read the array elements
-        // TODO: Sort the array (Use Arrays.sort())
-        // TODO: Find the middle element (index n/2)
-        // TODO: Print the median
-    
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        if (!sc.hasNextInt()) return;
+        
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+        
+        Arrays.sort(arr);
+        
+        int medianIndex = n / 2;
+        System.out.println(arr[medianIndex]);
+        
+        sc.close();
+    }
 }
